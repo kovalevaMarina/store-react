@@ -1,0 +1,57 @@
+@import "../../styles/all.scss";
+
+.header {
+  color: $white;
+  background-color: $shakespeare;
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+  }
+
+  &-left {
+    display: flex;
+  }
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  &__item {
+    position: relative;
+    padding: 0 20px;
+    & + &::before {
+      content: "";
+      width: 1px;
+      height: 16px;
+      display: block;
+      position: absolute;
+      background-color: $white;
+      left: 0;
+      top: calc(50% - 6px);
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    color: $white;
+  }
+}
+
+.label {
+  font-size: 13px;
+  margin-right: 5px;
+}
+
+.select {
+  font-size: 13px;
+  font-weight: 700;
+  color: $white;
+  background-color: $shakespeare;
+  border: none;
+}
+
+.language-select {
+  margin-right: 20px;
+}

@@ -1,19 +1,16 @@
-import React from "react";
-import Header from 'components/Header';
-import User from "components/User";
-import CreateTask from "components/CreateTask";
-import ListTask from "components/ListTask";
+import './style.scss';
+import React from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import Home from './views/Home';
 
 const App = () => {
-    return (
-         <div>
-              <h1>Webpack</h1>
-              <Header/>
-              <User/>
-              <CreateTask/>
-             <ListTask/>
-         </div>
-    )
-}
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
 export default App;

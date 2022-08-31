@@ -1,0 +1,37 @@
+@import "../../../style.scss";
+.footer-top {
+  background-color: $shakespeare;
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+  }
+}
+
+.footer-delivery {
+  display: flex;
+  align-items: center;
+  &__img {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-right: 15px;
+    align-items: center;
+    color: $shakespeare;
+    border-radius: 50%;
+    background-color: $white;
+  }
+
+  &__txt {
+    font-size: 21px;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
+
+.footer-phone {
+  display: flex;
+  align-items: center;
+}
