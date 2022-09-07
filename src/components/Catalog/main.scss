@@ -1,0 +1,76 @@
+@import "../../styles/all.scss";
+
+.catalog {
+  padding: 50px 0;
+  &-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-title {
+    margin-bottom: 30px;
+    color: $dove-gray;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 930px;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 300px;
+      padding: 20px;
+      border: 1px solid rgba(101, 101, 101, 0.5);
+      box-shadow: 0px 8px 23px rgba(0, 0, 0, 0.06);
+      border-radius: 10px;
+
+      &-title {
+        font-size: 12px;
+        margin-bottom: 10px;
+        color: $dove-gray;
+      }
+
+      &-price {
+        font-size: 18px;
+        color: $citron;
+      }
+
+      &-btn {
+        padding: 15px;
+        background-color: $citron;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        transition: .4s ease;
+        &:hover {
+          background-color: $pelorous;
+        }
+      }
+
+      &-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      &-txt {
+        margin-right: 15px;
+      }
+    }
+    
+    &__img {
+      padding: 20px;
+      margin-bottom: 15px;
+      border:1px solid $mercury;
+      border-radius: 10px;
+      &--photo {
+        width: 210px;
+        height: 230px;
+      }
+    }
+  }
+}

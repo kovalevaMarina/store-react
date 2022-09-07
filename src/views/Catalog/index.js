@@ -1,9 +1,9 @@
 import { useContext, useEffect } from 'react';
 import { ContextProducts } from '../../store/context';
-import Promo from '../../components/Promo';
 import Catalog from '../../components/Catalog';
+import PromoRoute from '../../components/Promo/PromoRoute';
 
-function Home() {
+function CatalogPage() {
   const { products, setProducts } = useContext(ContextProducts);
   const apiProduct = 'https://fakestoreapi.com/products';
 
@@ -12,13 +12,16 @@ function Home() {
       .then((res) => res.json())
       .then((json) => setProducts(json));
   }, []);
-
   return (
     <>
-      <Promo />
-      <Catalog text={'Catalog'} />
+      <section className="route" style={{ backgroundColor: '#e5e5e5' }}>
+        <div className="container">
+          <PromoRoute />
+        </div>
+      </section>
+      <Catalog text={'All product'} />
     </>
   );
 }
 
-export default Home;
+export default CatalogPage;

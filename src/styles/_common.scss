@@ -28,10 +28,20 @@ a {
   }
 }
 
+.title-h2 {
+  font-size: 27px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .title-h4 {
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.active {
+  color: $pelorous;
 }
 
 

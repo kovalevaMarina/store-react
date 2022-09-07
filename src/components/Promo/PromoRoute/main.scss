@@ -1,0 +1,83 @@
+@import "./../../../style.scss";
+
+.promo {
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+  }
+
+  &-input {
+    position: relative;
+    &__search {
+      padding: 5px 10px;
+      border: none;
+      color: $silver;
+    }
+  }
+
+  &-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    padding: 10px;
+    color: $white;
+    text-transform: uppercase;
+    background-color: rgba(102, 98, 90, 0.5);
+  }
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
+
+.logo {
+  &-txt {
+    font-size: 45px;
+    font-weight: 700;
+    color: $dove-gray;
+  }
+}
+
+.route-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 400px;
+  &__link {
+    font-size: 16px;
+    font-weight: 700;
+    margin-right:  15px;
+    text-decoration: none;
+    color: $dove-gray;
+    text-transform: uppercase;
+  }
+}
+
+.cart {
+  &-item {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: $citron;
+  }
+
+  &-wrap {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.basket-item {
+  font-size: 15px;
+  font-weight: 700;
+  color: $dove-gray;
+  text-transform: uppercase;
+}

@@ -1,0 +1,38 @@
+@import "../../../style.scss";
+.sale {
+  &-item {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    border:2px solid $maroon-flush;
+    &__txt {
+      font-size: 13px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  &-img {
+    margin-bottom: 10px;
+    &__picture {
+      width: 210px;
+      height: 210px;
+    }
+  }
+
+  &-btn {
+    padding: 5px 15px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $pelorous;
+    border: none;
+    cursor: pointer;
+    transition: .4s ease;
+    &:hover {
+      background-color: $maroon-flush;
+    }
+  }
+}

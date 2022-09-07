@@ -1,93 +1,10 @@
 @import "../../styles/all.scss";
 
 .promo {
-  // background-image: url("../../assets/img/promo_bg.jpg");
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // height: 500px;
-  &-wrap {
-    padding-top: 30px;
-  }
-
-  &-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &-input {
-    position: relative;
-    &__search {
-      padding: 5px 10px;
-      border: none;
-      color: $silver;
-    }
-  }
 
   &-middle {
     max-width: 420px;
     padding-left: 70px;
-    padding-top: 203px;
+    padding-top: 170px;
   }
-
-  &-title {
-    font-size: 30px;
-    font-weight: 700;
-    margin: 0 0 5px 0;
-    padding: 10px;
-    color: $white;
-    text-transform: uppercase;
-    background-color: rgba(102, 98, 90, 0.5);
-  }
-}
-
-.fa-magnifying-glass {
-  position: absolute;
-  right: 10px;
-  top: 6px;
-}
-
-.logo {
-  &-txt {
-    font-size: 55px;
-    font-weight: 700;
-    color: $dove-gray;
-  }
-}
-
-.route-list {
-  &__item {
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0 10px;
-    text-decoration: none;
-    color: $dove-gray;
-    text-transform: uppercase;
-  }
-}
-
-.cart {
-  &-item {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 5px;
-    border-radius: 50%;
-    background-color: $citron;
-  }
-
-  &-wrap {
-    display: flex;
-    align-items: center;
-  }
-}
-
-.basket-item {
-  font-size: 15px;
-  font-weight: 700;
-  color: $dove-gray;
-  text-transform: uppercase;
 }
