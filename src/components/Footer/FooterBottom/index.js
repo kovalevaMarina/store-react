@@ -16,9 +16,9 @@ function FooterBootom() {
           </div>
           <nav className="nav">
             <ul className="menu-list">
-              {arrMenuFooter.map((elem) => {
+              {arrMenuFooter.map((elem, i) => {
                 return (
-                  <li className="menu-list__item">
+                  <li key={i} className="menu-list__item">
                     <a className="menu-list__link" href="#">
                       {elem}
                     </a>

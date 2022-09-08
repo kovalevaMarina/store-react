@@ -72,9 +72,9 @@ function FooterMiddle() {
               <p className="footer-middle__facebook--btn-link">Link</p>
             </button>
             <div className="footer-middle__facebook--member">
-              {arrUsersPhoto.map((userPhoto) => {
+              {arrUsersPhoto.map((userPhoto, i) => {
                 return (
-                  <div className="footer-middle__facebook--member-item">
+                  <div key={i} className="footer-middle__facebook--member-item">
                     <img
                       className="footer-middle__facebook--member-img"
                       src={userPhoto}
@@ -89,9 +89,9 @@ function FooterMiddle() {
           </div>
           <div className="footer-middle__twitter">
             <h4 className="title-h4 footer-middle__title">From twitter</h4>
-            {twitterInfo.map((elem) => {
+            {twitterInfo.map((elem, i) => {
               return (
-                <div className="footer-middle__twitter-info">
+                <div key={i} className="footer-middle__twitter-info">
                   <div className="footer-middle__twitter-img">
                     <img
                       className="footer-middle__twitter-img--icon"
@@ -106,9 +106,9 @@ function FooterMiddle() {
           <div className="footer-middle__info">
             <h4 className="title-h4 footer-middle__title">Information</h4>
             <ul className="footer-middle__info-list">
-              {informationItems.map((item) => {
+              {informationItems.map((item, i) => {
                 return (
-                  <li className="footer-middle__info-list--item">
+                  <li key={i} className="footer-middle__info-list--item">
                     <div className="arrow arrow-right"></div>
                     <p className="footer-middle__info-list--txt">{item}</p>
                   </li>
@@ -119,16 +119,18 @@ function FooterMiddle() {
           <div className="footer-middle__contact">
             <h4 className="title-h4 footer-middle__title">Contact Us</h4>
             <ul className="footer-middle__contact-list">
-              {contactItems.map((item) => {
+              {contactItems.map((item, i) => {
                 return (
-                  <li className="footer-middle__contact-list--item">{item}</li>
+                  <li key={i} className="footer-middle__contact-list--item">
+                    {item}
+                  </li>
                 );
               })}
             </ul>
             <ul className="footer-middle__contact-social">
-              {socialIcons.map((icon) => {
+              {socialIcons.map((icon, i) => {
                 return (
-                  <li className="footer-middle__contact-social--item">
+                  <li key={i} className="footer-middle__contact-social--item">
                     <a className="footer-middle__contact-social--link" href="#">
                       <img
                         className="footer-middle__contact-social--icon"

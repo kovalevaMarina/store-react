@@ -1,0 +1,57 @@
+@import "../../style.scss";
+
+.product {
+  padding: 35px 0;
+  &-item {
+    width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid rgba(101, 101, 101, 0.5);
+    box-shadow: 0px 8px 23px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    &__img {
+      padding: 20px;
+      margin-right: 20px;
+      border-radius: 10px;
+      border:1px solid $mercury;
+      &--photo {
+        width: 350px;
+        height: 400px;
+      }
+    }
+
+    &__info {
+      &--title {
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: $flint;
+      }
+
+      &--txt {
+        margin-bottom: 15px;
+      }
+
+      &--price {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: $citron;
+      }
+    }
+  }
+}
+
+.btn-basket {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  color: $white;
+  background-color: $citron;
+  cursor: pointer;
+  transition: .4s ease;
+  &:hover {
+    background-color: $dove-gray;
+  }
+}

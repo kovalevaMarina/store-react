@@ -25,8 +25,8 @@ function Header() {
           <div className="header-left">
             {headerSelect.map((item) => {
               return (
-                <div className={item.id}>
-                  <label className="label" for={item.id}>
+                <div key={item.id} className={item.id}>
+                  <label className="label" htmlFor={item.id}>
                     {item.label}
                   </label>
                   <select className={item.class} id={item.id}>
@@ -41,7 +41,7 @@ function Header() {
               <ul className="menu-list">
                 {arrMenu.map((elem) => {
                   return (
-                    <li className="menu-list__item">
+                    <li key={elem} className="menu-list__item">
                       <a className="menu-list__link" href="#">
                         {elem}
                       </a>

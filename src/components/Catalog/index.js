@@ -4,10 +4,19 @@ import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 import { ContextProducts } from '../../store/context';
 import CatalogTitle from './CatalogTitle';
 import Sale from './Sale';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 function Catalog({ text }) {
   const { products, setProducts } = useContext(ContextProducts);
+  console.log(useParams());
+
+  const apiProduct = 'https://fakestoreapi.com/products';
+  useEffect(() => {
+    fetch(apiProduct)
+      .then((res) => res.json())
+      .then((json) => console.log(json));
+  }, []);
 
   return (
     <section className="catalog">
@@ -17,7 +26,7 @@ function Catalog({ text }) {
           <div className="catalog-list">
             {products.map((product) => {
               return (
-                <div className="catalog-list__item">
+                <div key={product.id} className="catalog-list__item">
                   <div className="catalog-list__img">
                     <img
                       className="catalog-list__img--photo"
@@ -26,9 +35,13 @@ function Catalog({ text }) {
                   </div>
                   <div className="catalog-list__item-info">
                     <div className="catalog-list__item-txt">
-                      <h4 className="catalog-list__item-title">
+                      <Link
+                        to={`/catalog/${product.id}`}
+                        id={product.id}
+                        className="catalog-list__item-title"
+                      >
                         {product.title}
-                      </h4>
+                      </Link>
                       <p className="catalog-list__item-price">
                         ${product.price}
                       </p>

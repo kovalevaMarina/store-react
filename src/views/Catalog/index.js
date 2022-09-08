@@ -12,6 +12,7 @@ function CatalogPage() {
       .then((res) => res.json())
       .then((json) => setProducts(json));
   }, []);
+
   return (
     <>
       <section className="route" style={{ backgroundColor: '#e5e5e5' }}>

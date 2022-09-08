@@ -10,6 +10,8 @@ import Electronics from './views/Electronics';
 import Jewelery from './views/Jawelery';
 import MenClothing from './views/MenClothing';
 import WomenClothing from './views/WomenClothing';
+import ErrorPage from './views/Error';
+import ProductItem from './views/Product';
 
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -21,10 +23,12 @@ const App = () => {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="catalog" element={<CatalogPage />} />
+            <Route path="catalog/:productId" element={<ProductItem />} />
             <Route path="electronics" element={<Electronics />} />
             <Route path="jewelery" element={<Jewelery />} />
             <Route path="men" element={<MenClothing />} />
             <Route path="women" element={<WomenClothing />} />
+            <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>
       </BrowserRouter>

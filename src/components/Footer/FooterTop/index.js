@@ -13,6 +13,7 @@ function FooterTop() {
       ),
       text: 'free shiping on orders over 100$',
       class: 'footer-delivery',
+      id: 1,
     },
 
     {
@@ -24,6 +25,7 @@ function FooterTop() {
       ),
       text: 'call us! toll free 409-8888-0099',
       class: 'footer-phone',
+      id: 2,
     },
   ];
   return (
@@ -32,7 +34,7 @@ function FooterTop() {
         <div className="footer-top__wrap">
           {infoDelivery.map((elem) => {
             return (
-              <div className={elem.class}>
+              <div key={elem.id} className={elem.class}>
                 <div className="footer-delivery__img">{elem.img}</div>
                 <p className="footer-delivery__txt">{elem.text}</p>
               </div>

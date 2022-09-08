@@ -18,7 +18,7 @@ function PromoRoute() {
       <ul className="route-list">
         <li className="route-list__item">
           <NavLink
-            activeClassName="active"
+            activeclassname="active"
             className="route-list__link"
             to={'/catalog'}
           >
@@ -27,7 +27,7 @@ function PromoRoute() {
         </li>
         <li className="route-list__item">
           <NavLink
-            activeClassName="active"
+            activeclassname="active"
             className="route-list__link"
             to={'/electronics'}
           >
@@ -36,7 +36,7 @@ function PromoRoute() {
         </li>
         <li className="route-list__item">
           <NavLink
-            activeClassName="active"
+            activeclassname="active"
             className="route-list__link"
             to={'/jewelery'}
           >
@@ -45,20 +45,20 @@ function PromoRoute() {
         </li>
         <li className="route-list__item">
           <NavLink
-            activeClassName="active"
+            activeclassname="active"
             className="route-list__link"
             to={'/men'}
           >
-            men's clothing
+            men
           </NavLink>
         </li>
         <li className="route-list__item">
           <NavLink
-            activeClassName="active"
+            activeclassname="active"
             className="route-list__link"
             to={'/women'}
           >
-            women's clothing
+            women
           </NavLink>
         </li>
       </ul>
