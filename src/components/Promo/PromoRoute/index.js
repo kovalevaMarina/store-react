@@ -6,8 +6,11 @@ import {
   faTags,
   faCartShopping,
 } from '@fortawesome/free-solid-svg-icons';
+import { ContextBasket } from '../../../store/context';
+import { useContext } from 'react';
 
 function PromoRoute() {
+  const { basket } = useContext(ContextBasket);
   return (
     <div className="promo-top">
       <div className="logo">
@@ -81,8 +84,8 @@ function PromoRoute() {
             <FontAwesomeIcon icon={faCartShopping} style={{ color: 'white' }} />
           </Link>
         </div>
-        <Link className="basket-item" to={'/basket'}>
-          Count(0)
+        <Link className="basket-field" to={'/basket'}>
+          Count({basket.length})
         </Link>
       </div>
     </div>

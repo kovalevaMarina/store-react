@@ -13,9 +13,8 @@ function Sale() {
           />
         </div>
         <p className="sale-item__txt">
-          Click the link below for more information
+          Choose products in the catalog at favorable prices
         </p>
-        <button className="sale-btn">More</button>
       </div>
     </aside>
   );

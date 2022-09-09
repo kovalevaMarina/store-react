@@ -2,17 +2,36 @@ import './main.scss';
 import PromoRoute from '../../components/Promo/PromoRoute';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useContext } from 'react';
+import { ContextBasket } from '../../store/context';
 
 function ProductItem() {
   const { productId } = useParams();
   const apiProduct = `https://fakestoreapi.com/products/${productId}`;
   const [product, setProduct] = useState(null);
+  const { basket, setBasket } = useContext(ContextBasket);
 
   useEffect(() => {
     fetch(apiProduct)
       .then((res) => res.json())
       .then((json) => setProduct(json));
   }, []);
+
+  const addToBasket = () => {
+    product.quantity = 1;
+    if (!basket.some((item) => item.id === product.id)) {
+      return setBasket([...basket, product]);
+    }
+    const newBasket = basket.map((item) => {
+      if (item.id === product.id) {
+        item.quantity++;
+        return item;
+      } else {
+        return item;
+      }
+    });
+    setBasket(newBasket);
+  };
 
   return (
     <>
@@ -37,7 +56,9 @@ function ProductItem() {
                 <p className="product-item__info--price">
                   Price: ${product.price}
                 </p>
-                <button className="btn-basket">Add to basket</button>
+                <button className="btn-basket" onClick={addToBasket}>
+                  Add to basket
+                </button>
               </div>
             </div>
           </div>

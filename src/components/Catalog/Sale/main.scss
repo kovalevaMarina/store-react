@@ -10,7 +10,6 @@
     border:2px solid $maroon-flush;
     &__txt {
       font-size: 13px;
-      margin-bottom: 10px;
       text-align: center;
     }
   }
@@ -20,19 +19,6 @@
     &__picture {
       width: 210px;
       height: 210px;
-    }
-  }
-
-  &-btn {
-    padding: 5px 15px;
-    text-transform: uppercase;
-    color: $white;
-    background-color: $pelorous;
-    border: none;
-    cursor: pointer;
-    transition: .4s ease;
-    &:hover {
-      background-color: $maroon-flush;
     }
   }
 }

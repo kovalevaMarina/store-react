@@ -1,22 +1,38 @@
 import './main.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
-import { ContextProducts } from '../../store/context';
+import { ContextProducts, ContextBasket } from '../../store/context';
+import { useContext, useEffect } from 'react';
 import CatalogTitle from './CatalogTitle';
 import Sale from './Sale';
-import { useContext, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Catalog({ text }) {
   const { products, setProducts } = useContext(ContextProducts);
-  console.log(useParams());
+  const { basket, setBasket } = useContext(ContextBasket);
 
   const apiProduct = 'https://fakestoreapi.com/products';
   useEffect(() => {
     fetch(apiProduct)
       .then((res) => res.json())
-      .then((json) => console.log(json));
+      .then((json) => setProducts(json));
   }, []);
+
+  const addToBasket = (product) => {
+    product.quantity = 1;
+    if (!basket.some((item) => item.id === product.id)) {
+      return setBasket([...basket, product]);
+    }
+    const newBasket = basket.map((item) => {
+      if (item.id === product.id) {
+        item.quantity++;
+        return item;
+      } else {
+        return item;
+      }
+    });
+    setBasket(newBasket);
+  };
 
   return (
     <section className="catalog">
@@ -46,7 +62,10 @@ function Catalog({ text }) {
                         ${product.price}
                       </p>
                     </div>
-                    <button className="catalog-list__item-btn">
+                    <button
+                      onClick={() => addToBasket(product)}
+                      className="catalog-list__item-btn"
+                    >
                       <FontAwesomeIcon
                         icon={faBasketShopping}
                         style={{ color: 'white' }}
