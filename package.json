@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VolynetsPanda/webpack.git"
+    "url": "git+https://github.com/web-smithy/store-react.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/VolynetsPanda/webpack/issues"
+    "url": "https://github.com/web-smithy/store-react/issues"
   },
-  "homepage": "https://github.com/VolynetsPanda/webpack#readme",
+  "homepage": "https://github.com/web-smithy/store-react",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",

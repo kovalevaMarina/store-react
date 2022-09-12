@@ -1,6 +1,6 @@
 import './style.scss';
 import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { ContextProducts, ContextBasket } from './store/context';
 import Layout from './components/Layout';
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <ContextProducts.Provider value={{ products, setProducts }}>
       <ContextBasket.Provider value={{ basket, setBasket }}>
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
@@ -35,7 +35,7 @@ const App = () => {
               <Route path="*" element={<ErrorPage />} />
             </Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </ContextBasket.Provider>
     </ContextProducts.Provider>
   );
